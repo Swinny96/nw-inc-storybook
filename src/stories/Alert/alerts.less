@@ -1,0 +1,166 @@
+@import '../master.less';
+
+.alert-strong {
+  font-weight: 700;
+  font-size: @font-size-small;
+  font-family: 'Poppins-Medium', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: @dark-grey-4;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.alert-paragraph {
+  font-weight: regular;
+  font-size: @font-size-small;
+  font-family: 'Poppins-Medium', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: @dark-grey-4;
+  display: inline-block;
+  width: 100%;
+  line-height: 1.2;
+}
+
+.alert-success {
+  background-color: @white;
+  border: 2px solid @success-green;
+  gap: 24px;
+  align-items: center;
+  border-left: 20px solid @success-green;
+}
+
+.alert-info {
+  background-color: @white;
+  border: 2px solid @blue;
+  gap: 24px;
+  align-items: center;
+  border-left: 20px solid @blue;
+}
+
+.alert-warning {
+  background-color: @white;
+  border: 2px solid @warning-orange;
+  gap: 24px;
+  align-items: center;
+  border-left: 20px solid @warning-orange;
+}
+
+.alert-danger {
+  background-color: @white;
+  border: 2px solid @error-red;
+  gap: 24px;
+  align-items: center;
+  border-left: 20px solid @error-red;
+}
+
+.alert-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.alert-dismissible .close {
+  color: #1c1f21;
+  position: absolute;
+  right: 16px;
+  top: 4px;
+  z-index: 1033;
+  padding: 0;
+  opacity: .8;
+  padding-bottom: 5px;
+  font-size: 2rem;
+}
+
+.sk-notification {
+  &.alert {
+    right: 0;
+    max-width: 450px;
+    width: 100%;
+    border: none;
+    padding: 0;
+    border-radius: 8px;
+    position: relative;
+    .sk-notfication-contents {
+      position: relative;
+      padding: 1em;
+      .notify-title {
+        color: @notifications-popup-title-font;
+        display: block;
+        font-weight: @notifications-popup-title-font-weight;
+        font-family: @notifications-popup-title-font-family;
+        margin-bottom: 6px;
+      }
+      .notify-message {
+        margin-bottom: 0;
+      }
+      hr {
+        border-top-color: @notifications-popup-title-font;
+      }
+      .alert-link {
+        cursor: pointer;
+        text-decoration: underline;
+        outline: 0;
+      }
+    }
+    &.alert-success {
+      background-color: @notifications-popup-success-background;
+      border: @notifications-popup-success-border;
+      border-left: 20px solid @success-green;
+      color: @notifications-popup-success-font-color;
+      .sk-notfication-contents {
+        .alert-link {
+          color: @notifications-popup-title-font;
+        }
+      }
+    }
+    &.alert-info {
+      background-color: @notifications-popup-info-background;
+      border: @notifications-popup-info-border;
+      border-left: 20px solid @blue;
+      color: @notifications-popup-info-font-color;
+      .sk-notfication-contents {
+        .alert-link {
+          color: @notifications-popup-title-font;
+        }
+      }
+    }
+    &.alert-warning {
+      background-color: @notifications-popup-warning-background;
+      border: @notifications-popup-warning-border;
+      border-left: 20px solid @warning-orange;
+      color: @notifications-popup-warning-font-color;
+      .sk-notfication-contents {
+        .alert-link {
+          color: @notifications-popup-title-font;
+        }
+      }
+    }
+    &.alert-danger {
+      background-color: @notifications-popup-danger-background;
+      border: @notifications-popup-danger-border;
+      border-left: 20px solid @error-red;
+      color: @notifications-popup-danger-font-color;
+      .sk-notfication-contents {
+        .alert-link {
+          color: @notifications-popup-title-font;
+        }
+      }
+    }
+  }
+  .notify-message-line {
+    display: inline-block;
+    width: 100%;
+    [class^=notify-message-param] {
+      font-weight: @notifications-popup-title-font-weight;
+    }
+    .notify-message-param-lastlogin {
+      font-weight: 400;
+    }
+  }
+  .close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    line-height: 1;
+    color: #1c1f21;
+    opacity: .8;
+  }
+}
